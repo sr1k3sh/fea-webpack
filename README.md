@@ -10,6 +10,9 @@ List of library used on the project.
 * gulp-sass/sass ( preprocessor)
 * slick carousel
 
+## live demo 
+[demo link](https://feacheck.000webhostapp.com/newtest/ "webpack fea")
+
 ## folder structure
 
 * root
@@ -79,5 +82,4 @@ large
 * if everything is ok, You can start project by `npm start` on cmd which will start on the brower by browsersync
 
 
-## live demo 
-[demo link](https://feacheck.000webhostapp.com/newtest/ "webpack fea")
+
