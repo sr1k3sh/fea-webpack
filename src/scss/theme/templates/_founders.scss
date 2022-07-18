@@ -1,0 +1,177 @@
+.fe-founders{
+    &__section{
+        padding: 40px 0;
+        @include media-breakpoint-up(md){
+            padding: 80px 0 0;
+        }
+        position: relative;
+        background-color: $white;
+
+        & .fe__h5{
+            color: $white;
+            margin-bottom: 16px;
+            @include media-breakpoint-up(md){
+                margin-bottom: 60px;
+            }
+            z-index: 1;
+        }
+
+        & .container-fluid{
+            padding: 0 32px;
+            @include media-breakpoint-up(lg){
+                padding: 0 60px;
+            }
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 125px;
+            height: calc(100%/2.72);
+            @include media-breakpoint-up(sm){
+                height: calc(100%/3);
+            }
+            @include media-breakpoint-up(lg){
+                height: calc(100%/1.5);
+            }
+            background-color: $ternary;
+            z-index: 0;
+        }
+    }
+
+    &__card{
+        width: 100%;
+    }
+
+    &__figure{
+        & img{
+            width: 100%;
+            aspect-ratio: 311/175;
+            max-height: 565px;
+
+        }
+    }
+
+    &__img{
+        aspect-ratio: 311/175;
+        width: 100%;
+        @include media-breakpoint-up(lg){
+            height: 565px;
+            aspect-ratio: unset;
+        }
+        object-fit: cover;
+    }
+
+    &__splide{
+        padding: 0 !important;
+
+        & .splide__arrow{
+            &:hover{
+                & svg{
+                    fill: $primary !important;
+                }
+            }
+            & svg{
+                fill: $white;
+            }
+        }
+
+        & .splide__slide img{
+            height: 100%;
+        }
+    }
+
+    &__custom-arrows{
+        position: absolute;
+        bottom: 60px;
+        left: 77px;
+        width: calc(100% - 77px - 60px);
+    }
+
+    &__custom-list{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        & li{
+            padding: 20px 0;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $white;
+                opacity: 0.2;
+            }
+            &:last-child{
+                padding-bottom: 0;
+                &::after{
+                    content: unset;
+                }
+            }
+        }
+    }
+
+    &__custom-button{
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+        width: 100%;
+        text-align: left;
+        @extend .fe__h2;
+        color: $white;
+        transition: 0.3s;
+        &:hover , &.active{
+            color: $primary;
+        }
+    }
+
+    &__fig{
+        position: relative;
+        margin: 0;
+        height: 100%;
+    }
+
+    &__anchor{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        bottom: 16px;
+        left: 16px;
+        @extend .fe__h2;
+        text-decoration: none;
+        color: $white;
+        margin-bottom: 0;
+        @include media-breakpoint-up(lg){
+            display: none;
+        }
+
+        & svg{
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    &__slide{
+        &.splide__slide{
+            background-color: $white;
+            margin-bottom: 16px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            @include media-breakpoint-up(lg){
+                margin-bottom: 0;
+            }
+        }
+    }
+}
